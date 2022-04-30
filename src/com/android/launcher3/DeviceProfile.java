@@ -273,7 +273,7 @@ public class DeviceProfile {
 
         hotseatQsbHeight = res.getDimensionPixelSize(R.dimen.qsb_widget_height);
         boolean allowPhone = Utilities.getPrefs(context).getBoolean(KEY_PHONE_TASKBAR, false);
-        isTaskbarPresent = (isTablet || allowPhone) && ApiWrapper.TASKBAR_DRAWN_IN_PROCESS
+        isTaskbarPresent = allowPhone && ApiWrapper.TASKBAR_DRAWN_IN_PROCESS
                 && FeatureFlags.ENABLE_TASKBAR.get();
         if (isTaskbarPresent) {
             taskbarSize = res.getDimensionPixelSize(R.dimen.taskbar_size);
