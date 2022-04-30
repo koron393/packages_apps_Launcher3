@@ -48,7 +48,7 @@ import java.io.PrintWriter;
 @SuppressLint("NewApi")
 public class DeviceProfile {
 
-    public static final String KEY_PHONE_TASKBAR = "pref_allow_phone_taskbar";
+    public static final String KEY_ALLOW_TASKBAR = "pref_allow_taskbar";
 
     private static final int DEFAULT_DOT_SIZE = 100;
     // Ratio of empty space, qsb should take up to appear visually centered.
@@ -272,8 +272,8 @@ public class DeviceProfile {
         }
 
         hotseatQsbHeight = res.getDimensionPixelSize(R.dimen.qsb_widget_height);
-        boolean allowPhone = Utilities.getPrefs(context).getBoolean(KEY_PHONE_TASKBAR, false);
-        isTaskbarPresent = allowPhone && ApiWrapper.TASKBAR_DRAWN_IN_PROCESS
+        boolean allowTaskbar = Utilities.getPrefs(context).getBoolean(KEY_ALLOW_TASKBAR, false);
+        isTaskbarPresent = allowTaskbar && ApiWrapper.TASKBAR_DRAWN_IN_PROCESS
                 && FeatureFlags.ENABLE_TASKBAR.get();
         if (isTaskbarPresent) {
             taskbarSize = res.getDimensionPixelSize(R.dimen.taskbar_size);

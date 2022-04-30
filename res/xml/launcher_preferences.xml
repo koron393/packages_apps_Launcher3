@@ -59,9 +59,9 @@
         launcher:logIdOff="614" />
 
     <SwitchPreference
-        android:key="pref_allow_phone_taskbar"
-        android:title="@string/pref_allow_phone_taskbar"
-        android:summary="@string/pref_allow_phone_taskbar_desc" />
+        android:key="pref_allow_taskbar"
+        android:title="@string/pref_allow_taskbar"
+        android:summary="@string/pref_allow_taskbar_desc" />
 
     <!--
       LAUNCHER_HOME_SCREEN_ROTATION_ENABLED(615)

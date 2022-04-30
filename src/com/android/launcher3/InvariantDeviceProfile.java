@@ -297,10 +297,10 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
             case KEY_SHOW_DRAWER_LABELS:
                 onConfigChanged(mContext);
                 break;
-            case DeviceProfile.KEY_PHONE_TASKBAR:
+            case DeviceProfile.KEY_ALLOW_TASKBAR:
                 // Create the illusion of this taking effect immediately
                 // Also needed because TaskbarManager inits before SystemUiProxy on start
-                boolean enabled = Utilities.getPrefs(mContext).getBoolean(DeviceProfile.KEY_PHONE_TASKBAR, false);
+                boolean enabled = Utilities.getPrefs(mContext).getBoolean(DeviceProfile.KEY_ALLOW_TASKBAR, false);
                 SystemUiProxy.INSTANCE.get(mContext).setTaskbarEnabled(enabled);
                 onConfigChanged(mContext, true);
                 break;
